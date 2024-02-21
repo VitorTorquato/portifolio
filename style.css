@@ -13,7 +13,7 @@
 
     --hue:194;
     --bg-color:hsl(var(--hue), 47%, 11%);
-    --projects-container-color:#334155;
+    --projects-container-color:hsl(var(--hue), 25%, 27%);
     --text-color:hsl(var(--hue), 40%, 96%);
     
 
@@ -27,14 +27,14 @@ body{
     color: var(--text-color);
     
 }
-
 img{
+    max-width: 100%;
+}
+.aboutme-img{
     max-width:30rem;
-    transform: translateY(3.2rem);
+    transform: translateY(2.6rem);
     object-fit: cover;
-    
-    
-   
+      
 }
 .container{
     width: 1100px;
@@ -65,7 +65,9 @@ nav a:hover{
 }
 
 /*****About-me******/
-
+.about-me{
+  min-height: 84vh;
+}
 
 .about-me p{
     max-width: 58rem;
@@ -76,26 +78,36 @@ nav a:hover{
 
 
 /*****Projects*****/
-.projects .container{
-    margin-top: 0 auto;
-    min-width:100%;
 
-    display: block;
+.projects{
     background-color: var(--projects-container-color);
+
+}
+.projects .container{
+    display: block;
+    padding: 6.4rem 0 6.4rem 0 ;
+    
     
 }
 
-.projects h1{
+.container h2{
+    margin-top: 3.2rem;
     font-size: 3.8rem;
     text-align: center;
-    margin: 3.2rem auto;
+    text-transform: uppercase;
 }
 
 .projects-grid{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1110px;
-    margin: 0 auto;
-    padding: 0 1.6rem;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-gap: 1rem;
 }
+
+
+
+
+
+
+
+
 
