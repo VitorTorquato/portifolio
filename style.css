@@ -29,6 +29,31 @@ body{
     
 }
 
+.contact-btn,
+.projects-button{
+    width: 12rem;
+    padding: .8rem;
+
+    display: block;
+    margin:  0 auto;
+    border: none;
+    border-radius: 4px;
+    background-color:var(--projects-content-color);
+
+    font-family: var(--font-standard);
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: .5s ease-in-out;
+    
+}
+.contact-btn:hover,
+.projects-button:hover{
+    background-color: var(--text-color);
+    font-weight: 600;
+    color: var(--projects-content-color);
+}
 img{
     width: 100%;   
 }
@@ -144,35 +169,75 @@ header .container{
     color: var(--text-color);
     font-size: 1.6rem;
     text-decoration: none;
+    transition: .5s ease-in-out;
 }
 
 .mobile-nav a:hover{
     transform: scale(1.1);
-    font-weight: 700;
+    background-color: var(--bg-color);
+    border-radius: 4px;
+
+}
+
+.desktop-nav{
+    display: none;
+}
+
+/****First view setion*****/
+
+.first-view{
+    min-height: 90vh;
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+.first-view .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+.first-view .container h5{
+    font-size: 2.2rem;
 }
 
 /****ABout me section****/
 
-.about-me .container{
-    min-height:84vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3.2rem;
 
+.about-me .container{
+    display: block;
     padding-top: 2.8rem;
 
 }
 
 .about-me .container h1{
-    font-size: 4rem;
+    font-size: 2.4rem;
+    margin:3.2rem 0 3.2rem 0;   
+
+    
 }
 
 .about-me  .container p{
     font-size: 1.6rem;
     line-height: 2.4rem;
+    text-align: left;
+
 }
 
+.about-me .container p + p{
+    margin-top: 3.2rem;
+}
+
+
+
+.about-me  .container img{
+    border-bottom: 1px solid var(--text-color);
+    width: 50vw;
+    display: block;
+    margin: 0 auto;
+}
 
 /***Projects section*****/
 
@@ -250,27 +315,9 @@ header .container{
 }
 
 
-.projects-button{
-    width: 12rem;
-    padding: .8rem;
 
-    display: block;
-    margin:  0 auto;
-    border: none;
-    border-radius: 4px;
-    background-color:var(--projects-content-color);
 
-    font-family: var(--font-standard);
-    color: var(--text-color);
-    font-size: 1rem;
-    text-transform: uppercase;
-    
-}
 
-.projects-button:hover{
-    background-color:  #1e293b;
-    font-weight: 600;
-}
 
 
 /****Section tools****/
@@ -280,10 +327,11 @@ header .container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 1.2rem;
+    place-items: center;
 }
 
 .tools-grid img{
-      max-width: 12rem;
+      width: 20vw;
         
 }
 
@@ -297,15 +345,30 @@ footer{
 
 footer a i{
     color: var(--text-color);
-    font-size: 2.4rem;
+    font-size: 3rem;
 }
 
 footer a i:hover{
     transform: scale(1.1);
 }
 
+footer i{
+    color: var(--text-color);
+    font-size: 3rem;
+}
 
-@media(min-width:520px){
+footer  i:hover{
+    transform: scale(1.1);
+}
+
+
+@media(min-width:424px){
+    .first-view .container h4{
+        font-size: 4rem;
+    }
+    .first-view .container h5{
+        font-size: 2.4rem;
+    }
     .about-me .container h1{
         font-size: 4.2rem;
     }
@@ -315,10 +378,72 @@ footer a i:hover{
 
 
 @media(min-width:768px){
-    .about-me .container h1{
-        font-size: 7rem;
+    #btnMenu{
+        display: none;
     }
 
+    .desktop-nav{
+        display: flex;
+        gap: 1.6rem;
+    }
+
+    .desktop-nav a{
+        text-transform: uppercase;
+        color: var(--text-color);
+        font-size: 1.6rem;
+        text-decoration: none;
+        transition: .5s ease-in-out;
+    }
+    .desktop-nav a:hover{
+        transform: scale(1.1);
+      
+    }
+
+    .first-view .container h4{
+        font-size: 4.6rem;
+    }
+    .first-view .container h5{
+        font-size: 3.2rem;
+    }
+
+    .first-view .container button{
+        width: 20rem;
+        font-size: 1.6rem;
+    }
+    .about-me .container h1{
+        font-size: 4rem;
+    }
+    .about-me .container p{
+        font-size:  2.2rem;
+        line-height: 2.8rem;
+    }
+
+    .about-me .container {
+        display: grid;
+        
+        grid-template-areas: 
+        "title img"
+        "text img"
+        "text img";
+    }
+
+    .about-me .container h1{
+        grid-area: title;
+        font-size: 3.2rem;
+        
+    }
+    .about-me .container p{
+        grid-area: text;
+        font-size: 2rem;
+
+        width: 50vw;
+    }
+    .about-me .container img{
+        grid-area: img;
+        width: 29rem;
+      
+        
+    }
     .projects-grid{
        display: grid;
        grid-template-columns: repeat(2,1fr);
@@ -337,6 +462,89 @@ footer a i:hover{
 
     .logo{
         font-size: 2rem;
+    }
+
+    .tools-grid img{
+        width: 8rem;
+          
+  }
+
+    @media(min-width:1024px){
+       
+        .first-view .container h4{
+            font-size: 6rem;
+        }
+        .first-view .container h5{
+            font-size: 3.8rem;
+        }
+        .first-view .container button{
+            width: 22rem;
+            height: 4rem;
+            font-size: 1.6rem;
+        }
+
+        .about-me .container {
+            display: grid;
+            
+            grid-template-areas: 
+            "title img"
+            "text img"
+            "text img";
+        }
+
+        .about-me .container h1{
+            grid-area: title;
+            
+        }
+        .about-me .container p{
+            grid-area: text;
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+
+            width: 50vw;
+        }
+        .about-me .container img{
+            grid-area: img;
+            width: 29rem;
+          
+            
+        }
+
+        .projects-grid{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap:1.6rem;
+            place-items: center; 
+     
+             
+         }
+
+         .projects-button{
+            width: 25rem;
+            height: 4rem;
+            font-size: 1.6rem;
+         }
+         .tools-grid img{
+            width: 10rem;
+              
+      }
+
+    }
+
+    @media  (min-width:1440px){
+        
+        .first-view .container h4{
+            font-size: 7.2rem;
+        }
+        .first-view .container h5{
+            font-size: 4rem;
+        }
+        .first-view .container button{
+            width: 26rem;
+            height: 4.8rem;
+            font-size: 1.6rem;
+        }
+
     }
 
 }
