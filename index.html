@@ -8,7 +8,9 @@
 
     <script src="https://kit.fontawesome.com/0e08ef1fea.js" crossorigin="anonymous"></script>
 
-    <script src="src/main.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     
 </head>
 <body>
@@ -17,145 +19,31 @@
             <div class="logo">
                 <h1><span><</span> TORQUATO <span>/></span></h1>
             </div>
-
+            
 
             
             <button id="btnMenu" class="hamburguer">
                 <div class="bar"></div>
             </button>
-
+            
             <nav class="mobile-nav">
-                <a href="#">About Me</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact</a>
+                <a href="/" onclick="route()">Home</a>
+                <a href="/about" onclick="route()">About Me</a>
+                <a href="/projects" onclick="route()">Projects</a>
+                <a href="/contact" onclick="route()">Contact</a>
             </nav>
-
+            
             <nav class="desktop-nav">
-                <a href="#">About Me</a>
-                <a href="#">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="/" onclick="route()">Home</a>
+                <a href="/about" onclick="route()">About Me</a>
+                <a href="/projects" onclick="route()">Projects</a>
+                <a href="/contact" onclick="route()">Contact</a>
             </nav>
         </div>
     </header>
-    <main>
-        <section class="first-view">
-            <div class="container">
-                <h4>Don't let your dreams be only dreams!</h4>
-                <h5>Let's build something together!</h5>
-               
-
-            </div>
-        </section>
-        <section class="about-me">
-            <div class="container">
-                
-                
-                <div class="my-description">
-                    <h1>Hello there!</h1>
-                    <p>I'm Vitor Torquato de Sousa, a passionate front-end developer driven by a thirst for growth and excellence. I'm all about creating sleek interfaces that not only boost businesses but also showcase their true essence.!</p>
-                    <p>
-                        When I'm not coding, you'll catch me diving into the world of sports, where I find the fuel to stay sharp and resilient. Just as I push my physical limits, I embrace challenges in my professional journey.</p>
-                    </div>
-                    
-                 
-                        <figure><img src="assets/WhatsApp Image 2024-02-20 at 13.22.29.png" alt="photo of vitor torquato de sousa"></figure>
-                   
-              
-            </div>
-        </section>
-
-        <section class="projects">
-            <div class="container">
-                <h2>Projects</h2>
-
-                <div class="projects-grid">
-                    <div class="project-card">
-                        
-                            <figure class="card-img">
-                                <img src="assets/expert.notes-img.png" alt="expert notes image">
-                            </figure>
-                       
-                       
-                        <figurecaption class="card-content">
-                            <h3>Expert Notes</h3>
-                            <span class="techs"><i class="fa-brands fa-react "></i></span>
-                       
-                        </figurecaption>
-                    </div>
-                    <div class="project-card">
-                            <figure class="card-img">
-                                <img src="assets/focus-timer-img.png" alt="focus timer image">
-                            </figure>
-                        <div class="card-content">
-                            <a href="https://vitortorquato.github.io/Focus-timer-dark-mode/" target="_blank">
-                                <h3>Focus Timer</h3>
-                            </a>
-                            
-                                <span class="techs">
-                                    <i class="fa-brands fa-html5"></i>
-                                    <i class="fa-brands fa-css3"></i>
-                                    <i class="fa-brands fa-js"></i>
-                                </span>
-                            
-                        </div>
-                    </div>
-                   <div class="project-card">
-                        
-                            <figure class="card-img">
-                                <img src="assets/calculate-img.png" alt="Calculater image">
-                            </figure>
-                       
-                       
-                        <figurecaption class="card-content">
-                            <h3>calculator</h3>
-                            <span class="techs">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3"></i>
-                                <i class="fa-brands fa-js"></i>
-                            </span>
-                        
-                       
-                        </figurecaption>
-                    </div>
-                    
-            </div>
-            
-        </div>
-
-        <button class="projects-button">
-            find out for more
-        </button>
-
-        </section>
-
-        <section class="tools">
-            <div class="container">
-                <h2>Languages and tools</h2>
-                <div class="tools-grid">
-                    <img src="assets/tech-logos/html5.svg" alt="html5 logo">
-                    <img src="assets/tech-logos/css3.svg" alt="css3 logo">
-                    <img src="assets/tech-logos/javascript.svg" alt="javascript logo">
-                    <img src="assets/tech-logos/react.svg" alt="react.js logo">
-                    <img src="assets/tech-logos/nodejs.svg" alt="node.js logo">
-                    <img src="assets/tech-logos/git.svg" alt="git logo">
-                   
-                </div>
-            </div>
-        </section>
-     </main>
-
-     <footer id="contact">
-        <a href="https://github.com/vitortorquato" target="_blank">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        
-        
-        <a href="https://www.linkedin.com/in/vitor-torquato-3743b6291/" target="_blank"> 
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        
-        <i class="fa-solid fa-envelope"></i>
-
-     </footer>
+    
+    <div id="app"></div>
+     
+    <script  src="src/index.js" type="module"></script>
 </body>
 </html>
