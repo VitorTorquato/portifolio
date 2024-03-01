@@ -29,12 +29,18 @@ body{
     
 }
 
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
 .projects-button{
     width: 12rem;
     padding: .8rem;
 
     display: block;
     margin:  0 auto;
+    text-align: center;
     border: none;
     border-radius: 4px;
     background-color:var(--projects-content-color);
@@ -45,6 +51,7 @@ body{
     font-size: 1rem;
     text-transform: uppercase;
     transition: background-color .6s ease-in-out;
+    
 
     cursor: pointer;
    
@@ -53,9 +60,9 @@ body{
 
 .projects-button:hover{
     background-color: var(--text-color);
-    font-weight: 600;
-    color: var(--projects-content-color);
+    color: var(--bg-color);  
 }
+
 img{
     width: 100%;   
 }
@@ -69,6 +76,8 @@ img{
     
     padding: 6.4rem 2rem;
 }
+
+
 /*****header mobile****/
 .logo{
     font-size: 1.2rem;
@@ -256,6 +265,7 @@ header .container{
 .projects .container,
 .tools .container{
     flex-direction: column;
+
     
 }
 
@@ -266,21 +276,6 @@ header .container{
     text-align: center;
 
 }
-
-.projects .container a{
-    text-decoration: none;
-    font-size: 2.2rem;
-    color: var(--text-color);
-    text-transform: uppercase;
-
-    transition: font-weight .4s ease-in-out;
-    cursor: pointer;
-}
-
-.projects .container a:hover{
-    font-weight: 700;
-}
-
 
 
 .projects-grid{
@@ -300,7 +295,12 @@ header .container{
     overflow: hidden;
     border-radius: 1.2rem;
     object-fit: cover;
+    transition: .6s ease-in-out;
+    	
+}
 
+.project-card:hover{
+    transform: scale(1.1);
 
 }
 
@@ -323,25 +323,52 @@ header .container{
 .card-content{
     
     display: block;
+    
     padding: 1.2rem;
     background-color: var(--projects-content-color);
     text-align: center;
-
-    font-size: 1.2rem;
     text-transform: uppercase;
 
 }
+
 
 .techs{
     margin-top: 1rem;
     width: 100%;
     justify-content: center;
-    gap: 1.2rem;
+    gap: 2.2rem;
     display: flex;
-    font-size: 1.6rem;
+    font-size: 2.4rem;
 }
 
+/****Projects-grid page*****/
+.projects-page .container{
+    display: block;
+    margin-bottom: 6.4rem;
+}
+ 
+.project-card{
+    text-decoration: none;
+}
+.projects-page .container h2{
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    text-align: left;
 
+    margin-bottom: 3.2rem;
+}
+
+.projects-page .container p{
+    font-size: 2rem;
+    margin-bottom: 6.4rem;
+}
+.projects-grid-page{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 3.2rem;
+    
+
+}
 
 
 
@@ -474,6 +501,7 @@ footer  i:hover{
 
     .project-card{
         flex: 1;
+       
     }
     .projects .projects-button{
         display: block;
@@ -483,6 +511,30 @@ footer  i:hover{
         height: 4.2rem;
         font-size: 1.6rem;
         
+    }
+
+    /***Projects-page****/
+    .projects-page .container{
+        display: block;
+    }
+     
+    .projects-page .container h2{
+        font-size: 3.8rem;
+        text-transform: uppercase;
+        text-align: left;
+    
+        margin-bottom: 3.2rem;
+    }
+    
+    .projects-page .container p{
+        font-size: 2.2rem;
+        margin-bottom: 6.4rem;
+    }
+    .projects-grid-page{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 2rem;
+    
     }
 
 
