@@ -33,7 +33,7 @@ a{
     text-decoration: none;
     color: var(--text-color);
 }
-
+#btnSubmitForm,
 .projects-button{
     width: 12rem;
     padding: .8rem;
@@ -48,7 +48,7 @@ a{
     font-family: var(--font-standard);
     color: var(--text-color);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     transition: background-color .6s ease-in-out;
     
@@ -57,7 +57,7 @@ a{
    
     
 }
-
+#btnSubmitForm:hover,
 .projects-button:hover{
     background-color: var(--text-color);
     color: var(--bg-color);  
@@ -392,6 +392,71 @@ header .container{
       max-width: 6rem;
         
 }
+
+/****Contact page*****/
+
+.contact .container{
+    flex-direction: column;
+    gap: 3.2rem;
+   
+}
+
+.contact-bunner h1{
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.incons-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.incons-wrapper  a i{
+    font-size: 3rem;
+
+    margin-top: 3.2rem;
+}
+
+.incons-wrapper  a i:hover{
+    transform: scale(1.1);
+}
+
+form{
+    width: 100%;
+}
+
+fieldset{
+    border: none;
+}
+.fildeset-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+.form-element , .form-area{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 1.6rem;
+    background-color: var(--projects-content-color);
+    border-radius: 4px;
+
+}
+
+.form-area{
+    grid-column: 1/-1;
+}
+
 
 /****Footer****/
 footer{
