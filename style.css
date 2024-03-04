@@ -33,6 +33,7 @@ a{
     text-decoration: none;
     color: var(--text-color);
 }
+
 #btnSubmitForm,
 .projects-button{
     width: 12rem;
@@ -56,6 +57,10 @@ a{
     cursor: pointer;
    
     
+}
+
+#btnSubmitForm{
+    margin-top: 3.2rem;
 }
 #btnSubmitForm:hover,
 .projects-button:hover{
@@ -198,7 +203,7 @@ header .container{
 
 .first-view{
     min-height: 70vh;
-    font-size: 2.8rem;
+    font-size: 4rem;
     text-align: center;
     
 }
@@ -212,7 +217,7 @@ header .container{
 }
 
 .first-view .container h5{
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 /****ABout me section****/
@@ -224,7 +229,7 @@ header .container{
 }
 
 .about-me .container h1{
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     margin:3.2rem 0 3.2rem 0; 
       
     
@@ -414,9 +419,9 @@ header .container{
 }
 
 .incons-wrapper  a i{
-    font-size: 3rem;
-
+    font-size: 3.8rem;
     margin-top: 3.2rem;
+    transition: .6s ease-in-out;
 }
 
 .incons-wrapper  a i:hover{
@@ -425,6 +430,7 @@ header .container{
 
 form{
     width: 100%;
+    max-width: 50rem;
 }
 
 fieldset{
@@ -441,6 +447,11 @@ fieldset{
     flex-direction: column;
     gap: 1.2rem;
     margin-bottom: 1.2rem;
+}
+
+.input-wrapper input,
+.input-wrapper textarea{
+    color: var(--text-color);
 }
 .form-element , .form-area{
     appearance: none;
@@ -462,6 +473,7 @@ fieldset{
 footer{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 2.2rem;
     border-top: 1px solid #cbd5e1;
 }
@@ -471,19 +483,40 @@ footer a i{
     font-size: 3rem;
 }
 
-footer a i:hover{
+footer a  .fa-brands{
+    font-size: 3.6rem;
+    transition: transform .6s ease-in-out;
+}
+
+footer a  .fa-brands:hover{
     transform: scale(1.1);
 }
 
-footer i{
+.btnContact{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color:var(--projects-content-color);
+    padding: .8rem;
+    border-radius: 1.2rem;
+
+
+    font-family: var(--font-standard);
     color: var(--text-color);
-    font-size: 3rem;
-    transition: transform .5s ease-in-out;
-}
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: background-color .6s ease-in-out;
+    border: none;
 
-footer  i:hover{
-    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform .6s ease-in-out;
 }
+.btnContact:hover{
+    filter: brightness(1.2) ;
+}  
+
+
 
 
 @media(min-width:424px){
@@ -497,6 +530,9 @@ footer  i:hover{
         font-size: 4.2rem;
     }
     
+    .contact-bunner h1{
+        font-size: 3.2rem;
+      }
 }
 
 
@@ -543,7 +579,7 @@ footer  i:hover{
     }
     .about-me .container p{
        
-        font-size:  2rem;
+        font-size:  1.6rem;
         line-height: 2.4rem;
     }
 
@@ -612,6 +648,24 @@ footer  i:hover{
           
   }
 
+  .contact-bunner{
+    width: 50rem;
+    text-align: center;
+        
+  }
+
+  .contact-bunner h1{
+    font-size: 4rem;
+  }
+
+  .contact-bunner p{
+    font-size: 2rem;
+  }
+  .incons-wrapper{
+    width: 20rem;
+    margin: 0 auto;
+  }
+
     @media(min-width:1024px){
         .first-view .container h4{
             font-size: 6rem;
@@ -622,9 +676,27 @@ footer  i:hover{
 
         .about-me .container p{
            
-            font-size:  2.4rem;
+            font-size:  2rem;
             line-height: 3.2rem;
         }
+
+        .contact .container{
+            flex-direction: row;
+            
+      }
+
+      .contact-bunner{
+        width: 70rem;
+        text-align: left;      
+      }
+      
+      .contact-bunner h1{
+           margin-bottom: 3.2rem;
+      }
+      .incons-wrapper{
+        width: 50rem;
+        
+      }
            
 
     }
