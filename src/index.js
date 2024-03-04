@@ -31,7 +31,16 @@ btnMenu.addEventListener('click' , () => {
 
 })
 
+const mobLinks = document.querySelectorAll('a')
 
+
+mobLinks.forEach(btn => {
+    btn.addEventListener('click', () => {
+
+        document.querySelector('.hamburguer').classList.remove('is-active');
+        document.querySelector('.mobile-nav').classList.remove('is-active');
+    })
+})
 
 
 
